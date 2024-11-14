@@ -4,6 +4,16 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import io
 import uuid
 from PIL import Image, ImageDraw, ImageFont, ImageOps
+import os
+from http.server import SimpleHTTPRequestHandler, HTTPServer
+
+PORT = int(os.environ.get("PORT", 8000))
+
+def run_server():
+    server = HTTPServer(('0.0.0.0', PORT), SimpleHTTPRequestHandler)
+    print(f"Server running on port {PORT}")
+    server.serve_forever()
+
 
 botUsername = "@MakeMeQuote_bot";
 file_id_cache = {}
@@ -253,3 +263,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    run_server()
