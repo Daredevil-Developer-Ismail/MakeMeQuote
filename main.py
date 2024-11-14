@@ -250,7 +250,7 @@ async def handle_callback(update: Update, context: CallbackContext):
 # Main function to run the bot
 def main():
     # Initialize the Application with your bot's token
-    application = Application.builder().token('7906692925:AAHN5MyTuwSTXQXx5nwX7sQnIY55QgFtJrU').build()
+    application = Application.builder().token('7906692925:AAGk01p-pujaHpcbszLXpF5l-ibHpQO5GQo').build()
 
     # Add handlers
     application.add_handler(CommandHandler("start", start))
