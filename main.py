@@ -118,7 +118,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
                     ])
                     print(f"COLOR+{short_id}+{quote_text}+{username_text}")
                     await progress.delete()
-                    await update.message.reply_photo(photo=output, caption=f"> {quote_text.replace("!", "\\!").replace(".", "\\.")}", reply_markup=reply_markup, parse_mode="MarkdownV2")
+                    await update.message.reply_photo(photo=output, caption=f"> {quote_text}", reply_markup=reply_markup, parse_mode="MarkdownV2")
 
 
 
