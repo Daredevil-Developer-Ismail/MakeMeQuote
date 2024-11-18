@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 import os
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 
-PORT = int(os.environ.get("PORT", 8000))
+PORT = 8880
 
 def run_server():
     server = HTTPServer(('0.0.0.0', PORT), SimpleHTTPRequestHandler)
